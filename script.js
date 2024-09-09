@@ -1,4 +1,23 @@
 /**
+ * Custom Toast Notification
+**/
+
+function showToast(message, duration = 3000) {
+    const toast = document.getElementById('toast');
+
+    // Set toast message
+    toast.textContent = message;
+
+    // Show the toast
+    toast.style.display = 'block';
+
+    // Hide after the duration
+    setTimeout(function() {
+        toast.style.display = 'none';
+    }, duration);
+}
+
+/**
  * Contact Form Script
 **/
 
@@ -10,7 +29,7 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-        msg.innerHTML = "Message Sent!"
+        showToast('✅ Message Sent!');
     })
     setTimeout(function() {
         msg.innerHTML = ""
