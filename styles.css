@@ -38,10 +38,10 @@ body{
   display: none;
   position: fixed;
   bottom: 20px;
-  left: 50%;
+  left: 10%;
   transform: translateX(-50%);
-  background-color: #34495E; /* #34495E #333*/
-  color: #fff;
+  background-color: #e2e2e2; /* #34495E #333*/
+  color: rgba(0, 0, 0, 0.8); /* #FFF */
   padding: 15px;
   border-radius: 5px;
   z-index: 1000;
@@ -160,5 +160,9 @@ form .half .item input:focus, form .full textarea:focus, form .action input[type
   form .action input{
     margin-bottom: 10px;
     width: 100%;
+  }
+  #toast {
+    bottom: 20px;
+    left: 50%;
   }
 }
