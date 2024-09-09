@@ -29,7 +29,8 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
     .then(response => {
-        showToast('✅ Message Sent!');
+        // showToast('✅ Message Sent!')
+        window.location.replace('https://ashfaquertc.github.io/submission-completed')
     })
     setTimeout(function() {
         msg.innerHTML = ""
